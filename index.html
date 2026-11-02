@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AQA Combined Science Paper 1 Downloads</title>
+<style>
+:root{--site-primary:#173b70;--site-on-primary:#fff;--site-secondary:#e7eef8;--site-on-secondary:#142b49;--site-background:#f5f7fb;--site-on-background:#172235;color-scheme:light dark}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--site-background);color:var(--site-on-background)}
+.hero{background:var(--site-primary);color:var(--site-on-primary);padding:42px max(22px,calc((100vw - 1050px)/2))}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;opacity:.8;font-weight:700}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;margin:12px 0}.hero p{max-width:680px;color:#e4ecf8;line-height:1.6;margin:0}
+main{max-width:1050px;margin:0 auto;padding:28px 22px 54px}.notice,.print-note{border-radius:14px;padding:15px 18px;line-height:1.5;margin-bottom:20px}
+.notice{background:var(--site-secondary);color:var(--site-on-secondary)}
+.print-note{background:light-dark(#fff8e8,#3b3020);border:1px solid light-dark(#ead7a9,#6c5731);color:light-dark(#59451d,#f3dfb2)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.subject{background:light-dark(#fff,#1c2737);border:1px solid light-dark(#dce3ed,#344154);border-radius:18px;padding:21px;box-shadow:0 8px 25px rgb(16 35 63 / .07)}
+.subject h2{margin:0 0 7px;font-size:1.35rem}.subject p{margin:0 0 18px;line-height:1.5;color:light-dark(#526176,#c1ccda);min-height:48px}
+.download,.print-all{width:100%;min-height:48px;border:0;border-radius:11px;font:inherit;font-weight:750;cursor:pointer;padding:12px 15px}
+.download{background:var(--site-primary);color:var(--site-on-primary)}.print-all{margin-bottom:9px;background:var(--site-secondary);color:var(--site-on-secondary)}
+.download:hover,.print-all:hover{filter:brightness(1.12)}button:focus-visible,a:focus-visible{outline:3px solid #e2a83b;outline-offset:3px}
+.details{margin-top:16px}.details summary{cursor:pointer;font-weight:650;color:light-dark(#24466f,#b8d1f2)}
+.links{margin:12px 0 0;padding-left:19px;line-height:1.9;font-size:.9rem}a{color:light-dark(#174f91,#a8cfff)}
+footer{margin-top:28px;font-size:.85rem;color:light-dark(#5d6a7b,#b3bfce);line-height:1.6}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.subject p{min-height:0}}
+@media(prefers-color-scheme:dark){.notice{background:#26364d;color:#e3edf9}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="eyebrow">AQA GCSE · Combined Science: Trilogy · 8464</div><h1>Paper 1 Higher downloads</h1><p>Question papers and mark schemes for Biology, Chemistry and Physics, covering the available 2020–2025 exam series.</p></header>
+<main>
+<div class="notice"><strong>Exam series:</strong> 2020 and 2021 are November series; 2022–2025 are June series. Select a subject below to open its complete set of paper and mark-scheme links.</div>
+<div class="print-note"><strong>Printing:</strong> Choose a subject's print-set button to open its question papers and mark schemes. In your browser's print dialog, select <strong>Print on both sides / Two-sided</strong> (flip on long edge). Browsers require you to confirm printing; this page cannot silently send jobs to your printer or force its duplex setting.</div>
+<section class="grid" aria-label="Subject downloads">
+<article class="subject"><h2>Biology</h2><p>Paper 1 Higher · 8464/B/1H</p><button class="print-all" type="button" onclick="openPrintSet('biology')">Prepare Biology print set ↗</button><button class="download" type="button" onclick="showLinks('biology')">Show Biology PDF links ↓</button><details class="details" id="biology"><summary>Show all years and PDFs</summary><ul class="links" id="biology-links"></ul></details></article>
+<article class="subject"><h2>Chemistry</h2><p>Paper 1 Higher · 8464/C/1H</p><button class="print-all" type="button" onclick="openPrintSet('chemistry')">Prepare Chemistry print set ↗</button><button class="download" type="button" onclick="showLinks('chemistry')">Show Chemistry PDF links ↓</button><details class="details" id="chemistry"><summary>Show all years and PDFs</summary><ul class="links" id="chemistry-links"></ul></details></article>
+<article class="subject"><h2>Physics</h2><p>Paper 1 Higher · 8464/P/1H</p><button class="print-all" type="button" onclick="openPrintSet('physics')">Prepare Physics print set ↗</button><button class="download" type="button" onclick="showLinks('physics')">Show Physics PDF links ↓</button><details class="details" id="physics"><summary>Show all years and PDFs</summary><ul class="links" id="physics-links"></ul></details></article>
+</section>
+<footer>PDFs are hosted by AQA. Each subject button expands six exam years with separate question-paper and mark-scheme links. Your browser opens the PDFs; use its download control to save them. The 2020/2021 papers are November sessions, not summer sessions.</footer>
+</main>
+<script>
+const subjects={biology:{code:'B',label:'Biology'},chemistry:{code:'C',label:'Chemistry'},physics:{code:'P',label:'Physics'}};
+const sessions=[{year:'2025',suffix:'JUN25',label:'June 2025'},{year:'2024',suffix:'JUN24',label:'June 2024'},{year:'2023',suffix:'JUN23',label:'June 2023'},{year:'2022',suffix:'JUN22',label:'June 2022'},{year:'2021',suffix:'NOV21',label:'November 2021'},{year:'2020',suffix:'NOV20',label:'November 2020'}];
+function officialPdf(code,kind,suffix){return 'https://filestore.aqa.org.uk/resources/science/AQA-8464-'+code+'-1H-'+kind+'-'+suffix+'.PDF'}
+function openPrintSet(key){
+ const subject=subjects[key],printWindow=window.open('','_blank');
+ if(!printWindow){alert('Your browser blocked the print-list window. Allow pop-ups for this page, then try again.');return}
+ const items=sessions.map(session=>{const qp=officialPdf(subject.code,'QP',session.suffix),ms=officialPdf(subject.code,'MS',session.suffix);return '<li><strong>'+session.label+'</strong><br><a href="'+qp+'" target="_blank" rel="noopener">Question paper PDF</a> · <a href="'+ms+'" target="_blank" rel="noopener">Mark scheme PDF</a></li>'}).join('');
+ printWindow.document.open();
+ printWindow.document.write('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+subject.label+' Paper 1 Higher print list</title><style>body{font:16px Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#172235}h1{font-size:28px}p{line-height:1.5}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}button{padding:11px 16px;border:0;border-radius:7px;background:#173b70;color:white;font-weight:bold;cursor:pointer}li{padding:12px 0;border-bottom:1px solid #ddd;line-height:1.7}a{color:#174f91}@media print{.actions{display:none}body{margin:15mm auto}}</style></head><body><h1>'+subject.label+' – Paper 1 Higher</h1><p>Print checklist for the 2020–2025 available exam sessions. Open each question paper and mark scheme PDF, then print it using your browser PDF viewer. Choose two-sided printing in the printer settings if required.</p><div class="actions"><button onclick="window.print()">Print this checklist</button><button onclick="window.close()">Close</button></div><ol>'+items+'</ol></body></html>');
+ printWindow.document.close()
+}
+function showLinks(key){
+ const subject=subjects[key],details=document.getElementById(key),list=document.getElementById(key+'-links');
+ if(!list.children.length){sessions.forEach(session=>{const li=document.createElement('li'),qp=document.createElement('a'),ms=document.createElement('a');qp.href=officialPdf(subject.code,'QP',session.suffix);qp.target='_blank';qp.rel='noopener';qp.textContent=session.label+' – Question paper';ms.href=officialPdf(subject.code,'MS',session.suffix);ms.target='_blank';ms.rel='noopener';ms.textContent='Mark scheme';li.append(qp,document.createTextNode(' · '),ms);list.appendChild(li)})}
+ details.open=!details.open
+}
+</script>
+</body>
+</html>
